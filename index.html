@@ -1,14 +1,14 @@
 <html>
 	<head>
-		 <link rel="stylesheet" type="text/css" href="sampark.css">
-		 <script type="text/javascript" src="angular.min.js"></script>
-		 <script type="text/javascript" src="sampark.js"></script>
-		 <script type="text/javascript" src="sampark_na.js"></script>
+		 <link rel="stylesheet" type="text/css" href="styles/sampark.css">
+		 <script type="text/javascript" src="scripts/angular.min.js"></script>
+		 <script type="text/javascript" src="scripts/sampark.js"></script>
+		 <script type="text/javascript" src="scripts/sampark_na.js"></script>
 	</head>
 	<body ng-app="myApp">
 		<div class="menuBar" id="menuBar" ng-controller="MenuBarController as menu">
 			<div class="menus" id="menus">
-				<img id="shaastraLogo" src="shaastra.png" /> <!--Can be replaced with a logo of Sampark and Shaastra logo can be accomodated elsewhere-->
+				<img id="shaastraLogo" src="images/shaastra.png" /> <!--Can be replaced with a logo of Sampark and Shaastra logo can be accomodated elsewhere-->
 				<div class="menu" id="home" ng-click="menu.setSelect(1)" ng-class="{ active: menu.isSelect(1) }"> Home </div>
 				<div class="menu" id="m1" ng-click="menu.setSelect(2)" ng-class="{ active: menu.isSelect(2) }" ng-mouseenter="menu.setDropdown(1)" ng-mouseleave="menu.setDropdown(0)"> Menu1 </div>
 				<div class="menu" id="m2" ng-click="menu.setSelect(3)" ng-class="{ active: menu.isSelect(3) }"> Menu2 </div>
@@ -30,7 +30,7 @@
 			</div>
 		</div>
 		<div class="imageOpen" id="imageOpen">
-			<img class="imgOpen" id="imgOpen" src="img_open.png" /> <!--Background image for the top part-->
+			<img class="imgOpen" id="imgOpen" src="images/img_open.png" /> <!--Background image for the top part-->
 		</div>
 		<div class="contentOdd" id="content1">
 			CONTENT GOES HERE
