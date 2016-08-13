@@ -1,0 +1,45 @@
+<html>
+	<head>
+		 <link rel="stylesheet" type="text/css" href="sampark.css">
+		 <script type="text/javascript" src="angular.min.js"></script>
+		 <script type="text/javascript" src="sampark.js"></script>
+		 <script type="text/javascript" src="sampark_na.js"></script>
+	</head>
+	<body ng-app="myApp">
+		<div class="menuBar" id="menuBar" ng-controller="MenuBarController as menu">
+			<div class="menus" id="menus">
+				<img id="shaastraLogo" src="shaastra.png" /> <!--Can be replaced with a logo of Sampark and Shaastra logo can be accomodated elsewhere-->
+				<div class="menu" id="home" ng-click="menu.setSelect(1)" ng-class="{ active: menu.isSelect(1) }"> Home </div>
+				<div class="menu" id="m1" ng-click="menu.setSelect(2)" ng-class="{ active: menu.isSelect(2) }" ng-mouseenter="menu.setDropdown(1)" ng-mouseleave="menu.setDropdown(0)"> Menu1 </div>
+				<div class="menu" id="m2" ng-click="menu.setSelect(3)" ng-class="{ active: menu.isSelect(3) }"> Menu2 </div>
+				<div class="menu" id="m3" ng-click="menu.setSelect(4)" ng-class="{ active: menu.isSelect(4) }" ng-mouseenter="menu.setDropdown(3)" ng-mouseleave="menu.setDropdown(0)"> Menu3 </div> <!-- I put dropdowns for Menu 1 & 3 which can be changed as per requirements -->
+				<div class="menu" id="m4" ng-click="menu.setSelect(5)" ng-class="{ active: menu.isSelect(5) }"> Menu4 </div>
+				<div class="menu" id="m5" ng-click="menu.setSelect(6)" ng-class="{ active: menu.isSelect(6) }"> Menu5 </div>
+				<div class="menu" id="m6" ng-click="menu.setSelect(7)" ng-class="{ active: menu.isSelect(7) }"> Menu6 </div>
+			</div>
+			<div class="dropDownMenu" id="ddM1" ng-show="menu.isDropdown(1)" ng-mouseenter="menu.setDropdown(1)" ng-mouseleave="menu.setDropdown(0)"> <!-- Dropdown for 1 -->
+				<div class="ddElement"> DropDown 11 </div> <!-- Hyperlinks to be added -->
+				<div class="ddElement"> DropDown 12 </div>
+				<div class="ddElement"> DropDown 13 </div>
+				<div class="ddElement"> DropDown 14 </div>
+			</div>
+			<div class="dropDownMenu" id="ddM3" ng-show="menu.isDropdown(3)" ng-mouseenter="menu.setDropdown(3)" ng-mouseleave="menu.setDropdown(0)"> <!-- Dropdown for 3 -->
+				<div class="ddElement"> DropDown 31 </div>
+				<div class="ddElement"> DropDown 32 </div>
+				<div class="ddElement"> DropDown 33 </div>
+			</div>
+		</div>
+		<div class="imageOpen" id="imageOpen">
+			<img class="imgOpen" id="imgOpen" src="img_open.png" /> <!--Background image for the top part-->
+		</div>
+		<div class="contentOdd" id="content1">
+			CONTENT GOES HERE
+		</div>
+		<div class="contentEven" id="content2">
+			CONTENT GOES HERE
+		</div>
+		<div class="contentOdd" id="content3">
+			CONTENT GOES HERE
+		</div>
+	</body>
+</html>

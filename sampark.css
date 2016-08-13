@@ -1,0 +1,90 @@
+	body {
+		margin: 0;
+		background-color: #113d5b;
+	}
+
+	* {
+		box-sizing: border-box;
+	}
+
+	.menuBar {
+		width: 100%;
+		margin: 0 auto;
+		position: fixed;
+
+	}
+
+	.menus {
+		width: 100%;
+		display: inline-block;
+		text-align: center;
+		padding: 0px 100px 0px 100px;
+		background-color: rgba(255,255,255,0.8);
+	}
+
+	#shaastraLogo {
+		display: inline-block;
+		height: 50px;
+		width: auto;
+		vertical-align: middle;
+		padding: 15px 0px 15px 0px;
+		margin: 0px 150px 0px 0px;
+		cursor: pointer;
+	}
+
+	.menu {
+		display: inline-block;
+		text-align: center;
+		padding: 15px 20px 15px 20px; /* 20px is just padding left-right, 15px is so that 15+15+20(height)=50 which is the height of div*/
+		text-transform: uppercase;
+		font-family: Arial;
+		color: #113d5b; /* text color in shaastra logo */
+		text-decoration: none;
+		text-shadow: 0px 1px 1px #ffffff;
+		font-weight: 600;
+		font-size: 14px;
+		cursor: pointer;
+		height: 50px; /*Equal to height of the div*/
+	}
+
+	.menu:hover {
+		color: #333333;
+	}
+
+	.active {
+		color: #333333;
+	}
+
+	.ddElement {
+		display: inline;
+		font-family: Arial;
+		color: #ffffff;
+		padding: 10px 40px 10px 40px; /*random*/
+		font-size: 14px;
+		font-weight: 600;
+		text-transform: uppercase;
+	}
+
+	.dropDownMenu {
+		padding: 10px 0px 10px 0px;
+		background-color: rgba(17,61,91,0.8); /* same as #113d5b but a bit transparent */
+	}
+
+	.imgOpen {
+		width: 100%;
+		height: auto;
+	}
+
+	.contentOdd, .contentEven {
+		width: 80%;
+		margin: auto;
+		height: 500px;
+	}
+
+	.contentEven {
+		background-color: #e44324; /*Color of even numbered content box*/
+	}
+
+	.contentOdd {
+		background-color: #d5e2db; /*Color of odd numbered content box*/
+	}
