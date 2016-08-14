@@ -1,16 +1,8 @@
 var app = angular.module('myApp', []);
 
+var menubarPosition = false;
+
 app.controller('MenuBarController', function(){
-
-	this.select = 1;
-
-	this.setSelect = function(selectArg){
-		this.select = selectArg;
-	}
-
-	this.isSelect = function(selectArg){
-		return this.select === selectArg;
-	}
 
 	this.dropdown = 0;
 
@@ -22,4 +14,8 @@ app.controller('MenuBarController', function(){
 		return this.dropdown === dropdownArg;
 	}
 
+	this.menuPosition = menubarPosition;
+
 });
+
+
