@@ -66,8 +66,8 @@
 	}
 
 	.dropDownMenu {
-		padding: 10px 0px 10px 0px;
-		background-color: rgba(17,61,91,0.8); /* same as #113d5b but a bit transparent */
+		background-color: rgba(17,61,91,0.8); 
+		padding: 10px 0px 10px 0px;	/* same as #113d5b but a bit transparent */
 	}
 
 	.imgOpen {

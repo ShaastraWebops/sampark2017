@@ -1,9 +1,10 @@
 <html>
 	<head>
-		 <link rel="stylesheet" type="text/css" href="styles/sampark.css">
-		 <script type="text/javascript" src="scripts/angular.min.js"></script>
-		 <script type="text/javascript" src="scripts/sampark.js"></script>
-		 <script type="text/javascript" src="scripts/sampark_na.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<script type="text/javascript" src="scripts/jquery-3.1.0.min.js"></script>
+		<script type="text/javascript" src="scripts/angular.min.js"></script>
+		<script type="text/javascript" src="scripts/app.js"></script>
+		<script type="text/javascript" src="scripts/main.js"></script>
 	</head>
 	<body ng-app="myApp">
 		<div class="menuBar" id="menuBar" ng-controller="MenuBarController as menu">
@@ -17,16 +18,18 @@
 				<div class="menu" id="m5" ng-click="menu.setSelect(6)" ng-class="{ active: menu.isSelect(6) }"> Menu5 </div>
 				<div class="menu" id="m6" ng-click="menu.setSelect(7)" ng-class="{ active: menu.isSelect(7) }"> Menu6 </div>
 			</div>
-			<div class="dropDownMenu" id="ddM1" ng-show="menu.isDropdown(1)" ng-mouseenter="menu.setDropdown(1)" ng-mouseleave="menu.setDropdown(0)"> <!-- Dropdown for 1 -->
-				<div class="ddElement"> DropDown 11 </div> <!-- Hyperlinks to be added -->
-				<div class="ddElement"> DropDown 12 </div>
-				<div class="ddElement"> DropDown 13 </div>
-				<div class="ddElement"> DropDown 14 </div>
-			</div>
-			<div class="dropDownMenu" id="ddM3" ng-show="menu.isDropdown(3)" ng-mouseenter="menu.setDropdown(3)" ng-mouseleave="menu.setDropdown(0)"> <!-- Dropdown for 3 -->
-				<div class="ddElement"> DropDown 31 </div>
-				<div class="ddElement"> DropDown 32 </div>
-				<div class="ddElement"> DropDown 33 </div>
+			<div class="dropdowns" id="dropdowns">
+				<div class="dropDownMenu" id="ddM1" ng-show="menu.isDropdown(1)" ng-mouseenter="menu.setDropdown(1)" ng-mouseleave="menu.setDropdown(0)" ng-cloak> <!-- Dropdown for 1 -->
+					<div class="ddElement"> DropDown 11 </div> <!-- Hyperlinks to be added -->
+					<div class="ddElement"> DropDown 12 </div>
+					<div class="ddElement"> DropDown 13 </div>
+					<div class="ddElement"> DropDown 14 </div>
+				</div>
+				<div class="dropDownMenu" id="ddM3" ng-show="menu.isDropdown(3)" ng-mouseenter="menu.setDropdown(3)" ng-mouseleave="menu.setDropdown(0)" ng-cloak> <!-- Dropdown for 3 -->
+					<div class="ddElement"> DropDown 31 </div>
+					<div class="ddElement"> DropDown 32 </div>
+					<div class="ddElement"> DropDown 33 </div>
+				</div>
 			</div>
 		</div>
 		<div class="imageOpen" id="imageOpen">
