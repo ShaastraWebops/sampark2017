@@ -9,7 +9,7 @@ $(document).ready(function(){
 });
 
 var checkMenubarPosition = function(){
-	if($('#menus').innerHeight() + $('#menus').offset().top > $('#imageOpen').height()) { /*Condition for menu bar to reach bottom of the image */
+	if($('#menus').innerHeight() + $('#menus').offset().top > $('#videoOpen').height()) { /*Condition for menu bar to reach bottom of the image */
 		$('.menus').addClass('menusDown'); /*Color changes*/
 		$('.menu').addClass('menuDown');
 		$('.ddElement').addClass('ddElementDown');

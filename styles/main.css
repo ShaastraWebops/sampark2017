@@ -11,6 +11,7 @@
 		width: 100%;
 		margin: 0 auto;
 		position: fixed;
+		z-index: 1;
 	}
 
 	.menus {
@@ -41,6 +42,7 @@
 
 	#shaastraLogoBlack {
 		display: none;
+		filter: invert(100%);
 	}
 
 	.menu {
@@ -104,13 +106,13 @@
 		background-color: rgba(17,61,91,0.9) !important;
 	}
 
-	.imgOpen {
+	.vidOpen {
 		width: 100%;
 		height: auto;
 	}
 
 	.contentOdd, .contentEven {
-		width: 80%;
+		width: 100%;
 		margin: auto;
 		height: 500px;
 	}
