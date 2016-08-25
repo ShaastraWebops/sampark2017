@@ -1,15 +1,9 @@
 $(document).ready(function(){
-
-	var pLeftDD1 = parseInt($('#m1').position().left) - 200; /*200 is random, so that it comes to the center*/
-	$('#ddM1').css('padding-left', pLeftDD1);
-
-	var pLeftDD3 = parseInt($('#m3').position().left) - 200; /*For Menu3*/
-	$('#ddM3').css('padding-left', pLeftDD3);
-
+	$(this).scrollTop(0);
 });
 
 var checkMenubarPosition = function(){
-	if($('#menus').innerHeight() + $('#menus').offset().top > $('#videoOpen').height()) { /*Condition for menu bar to reach bottom of the image */
+	if($('#menus').innerHeight() + $('#menus').offset().top > $('.content').first().position().top) { /*Condition for menu bar to reach bottom of the image */
 		$('.menus').addClass('menusDown'); /*Color changes*/
 		$('.menu').addClass('menuDown');
 		$('.ddElement').addClass('ddElementDown');
@@ -27,4 +21,13 @@ var checkMenubarPosition = function(){
 };
 
 $(window).scroll(checkMenubarPosition);
+
+/* Smooth Anchor Scroll*/
+$(document).on('click', '.navigator', function(event){
+    event.preventDefault();
+
+    $('html, body').animate({
+        scrollTop: $( $.attr(this, 'href') ).offset().top
+    }, 500);
+});
 

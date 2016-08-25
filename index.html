@@ -5,48 +5,80 @@
 		<script type="text/javascript" src="scripts/angular.min.js"></script>
 		<script type="text/javascript" src="scripts/app.js"></script>
 		<script type="text/javascript" src="scripts/main.js"></script>
+</script>
+		<title>Sampark | 2017</title>
 	</head>
-	<body ng-app="myApp">
-		<div class="menuBar" id="menuBar" ng-controller="MenuBarController as menu">
+	<body>
+		<div id="top"></div>
+		<div class="menuBar" id="menuBar">
 			<div class="menus" id="menus">
-				<img id="shaastraLogoWhite" class="shaastraLogo" src="images/shaastra_white.png" />
-				<img id="shaastraLogoBlack" class="shaastraLogo" src="images/shaastra.png" />  <!--Can be replaced with a logo of Sampark and Shaastra logo can be accomodated elsewhere-->
-				<div class="menu" id="home"> Home </div>
-				<div class="menu" id="m1" ng-mouseenter="menu.setDropdown(1)" ng-mouseleave="menu.setDropdown(0)"> Menu1 </div>
-				<div class="menu" id="m2"> Menu2 </div>
-				<div class="menu" id="m3" ng-mouseenter="menu.setDropdown(3)" ng-mouseleave="menu.setDropdown(0)"> Menu3 </div> <!-- I put dropdowns for Menu 1 & 3 which can be changed as per requirements -->
-				<div class="menu" id="m4"> Menu4 </div>
-				<div class="menu" id="m5"> Menu5 </div>
-				<div class="menu" id="m6"> Menu6 </div>
-			</div>
-			<div class="dropdowns" id="dropdowns">
-				<div class="dropDownMenu" id="ddM1" ng-show="menu.isDropdown(1)" ng-mouseenter="menu.setDropdown(1)" ng-mouseleave="menu.setDropdown(0)" ng-cloak> <!-- Dropdown for 1 -->
-					<div class="ddElement"> DropDown 11 </div> <!-- Hyperlinks to be added -->
-					<div class="ddElement"> DropDown 12 </div>
-					<div class="ddElement"> DropDown 13 </div>
-					<div class="ddElement"> DropDown 14 </div>
-				</div>
-				<div class="dropDownMenu" id="ddM3" ng-show="menu.isDropdown(3)" ng-mouseenter="menu.setDropdown(3)" ng-mouseleave="menu.setDropdown(0)" ng-cloak> <!-- Dropdown for 3 -->
-					<div class="ddElement"> DropDown 31 </div>
-					<div class="ddElement"> DropDown 32 </div>
-					<div class="ddElement"> DropDown 33 </div>
-				</div>
+				<a href="#top" class="navigator"><img id="shaastraLogoWhite" class="shaastraLogo" src="images/shaastra_white.png" />
+				<img id="shaastraLogoBlack" class="shaastraLogo" src="images/shaastra.png" /></a>  <!--Can be replaced with a logo of Sampark and Shaastra logo can be accomodated elsewhere-->
+				<a href="#about" class="navigator"><div class="menu" id="m1"> About </div></a>
+				<a href="#why" class="navigator"><div class="menu" id="m2"> Why become a CA? </div></a>
+				<a href="#responsibilities" class="navigator"><div class="menu" id="m3"> Responsibilities </div></a>
+				<a href="#registration" class="navigator"><div class="menu" id="m4"> Registration </div></a>
+				<a href="#contact" class="navigator"><div class="menu" id="m5"> Contact Us </div></a>
 			</div>
 		</div>
 		<div class="videoOpen" id="videoOpen">
 			<!--<img class="imgOpen" id="imgOpen" src="images/img_open.png" />--> <!--Background image for the top part-->
-			<video autoplay muted loop class="vidOpen">
-				<source src="videos/Teaser_Shaastra.mp4" type="video/mp4"> <!-- Background video for the top part-->
-			</video>
+			<iframe id="vidOpen" src="https://www.youtube.com/embed/Iq8uGYtlmIA?autoplay=1&showinfo=0" frameborder="0" allowfullscreen volume="0"></iframe>
 		</div>
-		<div class="contentOdd" id="content1">
-			CONTENT GOES HERE
+		<div class="content" id="about">
+			<p class="header">About</p>
+			<p>Shaastra is the annual technical festival of IIT Madras. It is the largest technical fest of its kind in India and has the distinction of being the first ISO 9001:2008 certified student-organized event in the world.</p>
+			<p>As always, Shaastra aims to grow and evolve into a technical festival which involves everyone; be it budding engineers, young entrepreneurs, future policy makers or even technocrats. The underlying philosophy of Shaastra is to promote creative thinking and to showcase innovative technology and this is being upheld through various channels.</p>
 		</div>
-		<div class="contentEven" id="content2">
-			CONTENT GOES HERE
+		<div class="content" id="why">
+			<p class="header">Why become a Campus Ambassador?</p>
+			<ul>
+				<li>Professionalism</li>
+				<li>A platform to improve your negotiation and communication skills by interacting with people coming from various colleges in your region.</li>
+				<li>A chance to participate in and publicise various tech-related activities in your college.</li>
+				<li>An opportunity to improve managerial skills and organizational ability.</li>
+				<li>A privilege to be a part of one of the India's largest Tech-Festival</li>
+			</ul>
 		</div>
-		<div class="contentOdd" id="content3">
-			CONTENT GOES HERE
+		<div class="content" id="responsibilities">
+			<p class="header">Responsibilities</p>
+			<ul>
+				<li>Making outreach initiatives in a region</li>
+				<li>Coordinating with the Shaastra Team in case any event is to be conducted in your college</li>
+				<li>Supervise all engagement initiatives in a region</li>
+			</ul>
+		</div>
+
+		<div class="content" id="registration">
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScSSEz0CEZPFckRyv1UWytrTQZufyTeN4GcOyMQtI90EyAY0g/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0" id="registrationForm">Loading...</iframe>
+		</div>
+		<div class="content" id="contact">
+			<p class="header">Contact Us</p>
+			<div class="headContact">
+				<img class="contactDetail contactImage" src="images/core1.jpg" />
+				<p class="nameOfHead contactDetail">Rathna Kumar R</p>
+				<p class="contactDetail">+91 9677081113</p>
+				<p class="contactDetail">rathnakumarravichandran@gmail.com</p>
+				<p class="contactDetail">Core, Media and Student Relations</p>
+			</div>
+			<div class="headContact">
+				<img class="contactDetail contactImage" src="images/core2.jpg" />
+				<p class="nameOfHead contactDetail">Hitesh Singla</p>
+				<p class="contactDetail">+91 9677043890</p>
+				<p class="contactDetail">hiteshsingla90@gmail.com</p>
+				<p class="contactDetail">Core, Media and Student Relations</p>
+			</div>
+			<div class="headContact">
+				<img class="contactDetail contactImage" src="images/core3.png" />
+				<p class="nameOfHead contactDetail">M Aghamarshana</p>
+				<p class="contactDetail">+91 8122495355</p>
+				<p class="contactDetail">aghu1995@gmail.com</p>
+				<p class="contactDetail">Core, Media and Student Relations</p>
+			</div>
+			<p id="followUs"> Follow us on: <br />
+				<a href="https://www.facebook.com/Shaastra" target="_blank"><img class="logo" src="images/facebook_logo.png" /></a>
+				<a href="https://twitter.com/shaastraiitm" target="_blank"><img class="logo" src="images/twitter_logo.png" /></a> 
+			</p>
 		</div>
 	</body>
 </html>

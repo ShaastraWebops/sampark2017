@@ -1,6 +1,5 @@
 	body {
 		margin: 0;
-		background-color: #113d5b;
 	}
 
 	* {
@@ -8,18 +7,18 @@
 	}
 
 	.menuBar {
-		width: 100%;
+		width: 100vw;
 		margin: 0 auto;
 		position: fixed;
 		z-index: 1;
 	}
 
 	.menus {
-		width: 100%;
+		width: 100vw;
 		display: inline-block;
 		text-align: center;
-		padding: 0px 100px 0px 100px;
-		background-color: rgba(0,0,0,0.05);
+		padding: 0px 5%;
+		background-color: rgba(255,255,255,0.05);
 		transition: 0.5s;
 		-webkit-transition: 0.5s;
 		-o-transition: 0.5s;
@@ -35,27 +34,24 @@
 		height: 50px;
 		width: auto;
 		vertical-align: middle;
-		padding: 15px 0px 15px 0px;
-		margin: 0px 150px 0px 0px;
-		cursor: pointer;
+		padding: 15px 0px;
+		margin: 0px 5% 0px 0px;
 	}
 
 	#shaastraLogoBlack {
 		display: none;
-		filter: invert(100%);
 	}
 
 	.menu {
 		display: inline-block;
 		text-align: center;
-		padding: 15px 20px 15px 20px; /* 20px is just padding left-right, 15px is so that 15+15+20(height)=50 which is the height of div*/
+		padding: 15px 2%;
 		text-transform: uppercase;
 		font-family: Arial;
 		color: rgb(255,255,255); /* text color in shaastra logo */
 		text-decoration: none;
 		font-weight: 600;
 		font-size: 14px;
-		cursor: pointer;
 		height: 50px; /*Equal to height of the div*/
 		transition: 0.5s;
 		-webkit-transition: 0.5s;
@@ -69,60 +65,121 @@
 
 	.menu:hover {
 		color: rgb(17,61,91);
-		transition: 0s;
+		background-color: rgba(255,255,255,0.8);
 	}
 
 	.menuDown:hover {
-		color: rgb(0,0,0);
-	}
-
-	.ddElement {
-		display: inline;
-		font-family: Arial;
-		color: rgb(17,61,91);
-		padding: 15px 40px 15px 40px; /* same as #113d5b but a bit transparent */
-		font-size: 14px;
-		text-transform: uppercase;
-		transition: 0.5s;
-		-webkit-transition: 0.5s;
-		-o-transition: 0.5s;
-		-moz-transition: 0.5s;
-	}
-
-	.ddElementDown {
 		color: rgb(255,255,255) !important;
+		background-color: rgba(17,61,91,0.8);
 	}
 
-	.dropDownMenu {
-		background-color: rgba(255,255,255,0.8); 
-		padding: 15px 0px 15px 0px;	/*random*/
-		transition: 0.5s;
-		-webkit-transition: 0.5s;
-		-o-transition: 0.5s;
-		-moz-transition: 0.5s;
-	}
-
-	.dropDownMenuDown {
-		background-color: rgba(17,61,91,0.9) !important;
-	}
-
-	.vidOpen {
+	#vidOpen {
 		width: 100%;
-		height: auto;
+		height: 56.25vw;
 	}
 
-	.contentOdd, .contentEven {
+	.content {
 		width: 100%;
+		padding: 40px 5%;
+		font-size: 16px;
+		line-height: 30px;
+		font-family: Arial;
+		border-bottom: solid 4px #000;
 		margin: auto;
-		height: 500px;
 	}
 
-	.contentOdd {
-		background-color: #e44324; /*Color of even numbered content box*/
+	.content .header {
+		font-size: 40px;
+		text-transform: uppercase;
+		letter-spacing: -2;
+	}
+
+	.content .subHeader {
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+
+	.content ul li {
+		line-height: 40px;
+	}
+
+	.content .header:after {
+		display: block;
+		height: 2px;
+		width: 100%;
+		display: table;
+		content: " ";
+		margin: 10px 0px;
+	}
+
+	.content:nth-child(2n + 1) {
+		background-color: rgb(17,61,91);
 		color: #d5e2db;
 	}
 
-	.contentEven {
-		background-color: #d5e2db; /*Color of odd numbered content box*/
-		color: #e44324;
+	.content:nth-child(2n + 1) .header:after {
+		background: #d5e2db;
+	}
+
+	.content:nth-child(2n + 2) {
+		background-color: #d5e2db;
+		color: rgb(17,61,91);
+	}
+
+	.content:nth-child(2n + 2) .header:after {
+		background: rgb(17,61,91);
+	}
+
+	#registration {
+		padding: 0;
+	}
+
+	#registrationForm {
+		width: 100%;
+		height: 2200px;
+	}
+
+	#contact {
+		min-height: 100vh;
+		line-height: 40px;
+		border-bottom: none;
+	}
+
+	#contact .header {
+		text-align: center;
+		display: block;
+		width: 100%;
+	}
+
+	.headContact {
+		width: 33%;
+		float: left;
+		text-align: center;
+	}
+
+	#contact .contactDetail {
+		width: 100%;
+		line-height: 30px;
+	}
+
+	#contact  .contactImage {
+		width: 200px;
+		height: 200px;
+	}
+
+	.nameOfHead {
+		font-size: 20px !important;
+	}
+
+	.logo {
+		height: 30px;
+		width: 30px;
+		margin: 0px 10px;
+	}
+
+	#followUs {
+		text-align: center;
+		position: relative;
+		top: 50px;
+		margin-bottom: 150px;
 	}
