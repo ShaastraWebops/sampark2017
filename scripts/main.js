@@ -1,8 +1,8 @@
-$(document).ready(function(){
+$(document).ready(function() {
 	$(this).scrollTop(0);
 });
 
-var checkMenubarPosition = function(){
+var checkMenubarPosition = function() {
 	if($('#menus').innerHeight() + $('#menus').offset().top > $('.content').first().position().top) { /*Condition for menu bar to reach bottom of the image */
 		$('.menus').addClass('menusDown'); /*Color changes*/
 		$('.menu').addClass('menuDown');
@@ -24,10 +24,9 @@ $(window).scroll(checkMenubarPosition);
 
 /* Smooth Anchor Scroll*/
 $(document).on('click', '.navigator', function(event){
-    event.preventDefault();
-
-    $('html, body').animate({
-        scrollTop: $( $.attr(this, 'href') ).offset().top
-    }, 500);
+	event.preventDefault();
+	$('html, body').animate({
+		scrollTop: $( $.attr(this, 'href') ).offset().top
+	}, 1000);
 });
 

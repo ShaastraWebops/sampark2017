@@ -1,84 +1,109 @@
+<!DOCTYPE html>
 <html>
 	<head>
+		<link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="styles/pure-min.css">
+		<link rel="stylesheet" type="text/css" href="styles/grids-responsive-min.css">
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
+		<link rel="stylesheet" type="text/css" href="styles/content.css">
+		<link rel="stylesheet" type="text/css" href="styles/animations.css">
 		<script type="text/javascript" src="scripts/jquery-3.1.0.min.js"></script>
 		<script type="text/javascript" src="scripts/angular.min.js"></script>
 		<script type="text/javascript" src="scripts/app.js"></script>
 		<script type="text/javascript" src="scripts/main.js"></script>
-</script>
+		<script type="text/javascript" src="scripts/content_animation.js"></script>
 		<title>Sampark | 2017</title>
 	</head>
-	<body>
+	<body ngApp="myApp">
 		<div id="top"></div>
-		<div class="menuBar" id="menuBar">
+		<div class="menuBar" id="menuBar" ng-controller="MenuBarController">
 			<div class="menus" id="menus">
 				<a href="#top" class="navigator"><img id="shaastraLogoWhite" class="shaastraLogo" src="images/shaastra_white.png" />
-				<img id="shaastraLogoBlack" class="shaastraLogo" src="images/shaastra.png" /></a>  <!--Can be replaced with a logo of Sampark and Shaastra logo can be accomodated elsewhere-->
+				<img id="shaastraLogoBlack" class="shaastraLogo" src="images/shaastra.png" /></a> <!--Can be replaced with a logo of Sampark and Shaastra logo can be accomodated elsewhere-->
+				<img id="sponsorLogo" class="sponsorLogo" src="images/sponsorLogo.png" />
 				<a href="#about" class="navigator"><div class="menu" id="m1"> About </div></a>
 				<a href="#why" class="navigator"><div class="menu" id="m2"> Why become a CA? </div></a>
 				<a href="#responsibilities" class="navigator"><div class="menu" id="m3"> Responsibilities </div></a>
 				<a href="#registration" class="navigator"><div class="menu" id="m4"> Registration </div></a>
 				<a href="#contact" class="navigator"><div class="menu" id="m5"> Contact Us </div></a>
+				<a href="http://surc.shaastra.org" target="_blank"><div class="menu" id="m6"> SURC </div></a>
 			</div>
 		</div>
 		<div class="videoOpen" id="videoOpen">
 			<!--<img class="imgOpen" id="imgOpen" src="images/img_open.png" />--> <!--Background image for the top part-->
-			<iframe id="vidOpen" src="https://www.youtube.com/embed/Iq8uGYtlmIA?autoplay=1&showinfo=0" frameborder="0" allowfullscreen volume="0"></iframe>
+			<iframe id="vidOpen" src="https://www.youtube.com/embed/IifiNfpDEiU?autoplay=0&showinfo=0&rel=0" frameborder="0" allowfullscreen volume="0"></iframe>
 		</div>
 		<div class="content" id="about">
-			<p class="header">About</p>
-			<p>Shaastra is the annual technical festival of IIT Madras. It is the largest technical fest of its kind in India and has the distinction of being the first ISO 9001:2008 certified student-organized event in the world.</p>
-			<p>As always, Shaastra aims to grow and evolve into a technical festival which involves everyone; be it budding engineers, young entrepreneurs, future policy makers or even technocrats. The underlying philosophy of Shaastra is to promote creative thinking and to showcase innovative technology and this is being upheld through various channels.</p>
+			<p class="header animateElement animateElementOpacity">About</p>
+			<div class="animateElement animateElementOpacity">
+				<p>Shaastra is the annual technical festival of IIT Madras. It is the largest technical fest of its kind in India and has the distinction of being the first ISO 9001:2008 certified student-organized event in the world.</p>
+				<p>As always, Shaastra aims to grow and evolve into a technical festival which involves everyone; be it budding engineers, young entrepreneurs, future policy makers or even technocrats. The underlying philosophy of Shaastra is to promote creative thinking and to showcase innovative technology and this is being upheld through various channels.</p>
+			</div>
 		</div>
-		<div class="content" id="why">
-			<p class="header">Why become a Campus Ambassador?</p>
-			<ul>
-				<li>Professionalism</li>
-				<li>A platform to improve your negotiation and communication skills by interacting with people coming from various colleges in your region.</li>
-				<li>A chance to participate in and publicise various tech-related activities in your college.</li>
-				<li>An opportunity to improve managerial skills and organizational ability.</li>
-				<li>A privilege to be a part of one of the India's largest Tech-Festival</li>
+		<div class="content pure-g" id="why">
+			<p class="pure-u-1-1 header animateElement animateElementOpacity">Why become a Campus Ambassador?</p>
+			<ul class="pure-u-1-3">
+				<li class="animateElement animateElementLeft">Professionalism</li>
+				<li class="animateElement animateElementLeft">A platform to improve your negotiation and communication skills by interacting with people coming from various colleges in your region.</li>
+				<li class="animateElement animateElementLeft">A chance to participate in and publicise various tech-related activities in your college.</li>
+			</ul>
+			<div class="pure-u-1-3 animateElement animateElementOpacity">
+				<img id="questionMark" src="images/questionMark" />
+			</div>
+			<ul class="pure-u-1-3">
+				<li class="animateElement animateElementRight">An opportunity to improve managerial skills and organizational ability.</li>
+				<li class="animateElement animateElementRight">A privilege to be a part of one of the India's largest Tech-Festival</li>
 			</ul>
 		</div>
-		<div class="content" id="responsibilities">
-			<p class="header">Responsibilities</p>
-			<ul>
-				<li>Making outreach initiatives in a region</li>
-				<li>Coordinating with the Shaastra Team in case any event is to be conducted in your college</li>
-				<li>Supervise all engagement initiatives in a region</li>
+		<div class="content pure-g" id="responsibilities">
+			<p class="pure-u-1-1 header animateElement animateElementOpacity">Responsibilities</p>
+			<ul class="pure-u-1-1">
+				<li class="animateElement animateElementLeft">Making outreach initiatives in a region</li>
+				<li class="animateElement animateElementLeft">Coordinating with the Shaastra Team in case any event is to be conducted in your college</li>
+				<li class="animateElement animateElementLeft">Supervise all engagement initiatives in a region</li>
 			</ul>
 		</div>
-
-		<div class="content" id="registration">
+		<div class="content pure-g animateElement animateElementOpacity" id="registration">
 			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScSSEz0CEZPFckRyv1UWytrTQZufyTeN4GcOyMQtI90EyAY0g/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0" id="registrationForm">Loading...</iframe>
 		</div>
-		<div class="content" id="contact">
-			<p class="header">Contact Us</p>
-			<div class="headContact">
-				<img class="contactDetail contactImage" src="images/core1.jpg" />
-				<p class="nameOfHead contactDetail">Rathna Kumar R</p>
-				<p class="contactDetail">+91 9677081113</p>
-				<p class="contactDetail">rathnakumarravichandran@gmail.com</p>
-				<p class="contactDetail">Core, Media and Student Relations</p>
+		<div class="content pure-g" id="contact">
+			<p class="pure-u-1-1 header animateElement animateElementOpacity">Contact Us</p>
+			<div class="pure-u-1-3 headContact">
+				<img class="contactDetail contactImage animateElement animateElementLeft" src="images/core1.jpg" />
+				<p class="nameOfHead contactDetail animateElement animateElementLeft">Rathna Kumar R</p>
+				<p class="contactDetail animateElement animateElementLeft">+91 9677081113</p>
+				<p class="contactDetail animateElement animateElementLeft">rathnakumarravichandran@gmail.com</p>
+				<p class="contactDetail animateElement animateElementLeft">Core, Media and Student Relations</p>
 			</div>
-			<div class="headContact">
-				<img class="contactDetail contactImage" src="images/core2.jpg" />
-				<p class="nameOfHead contactDetail">Hitesh Singla</p>
-				<p class="contactDetail">+91 9677043890</p>
-				<p class="contactDetail">hiteshsingla90@gmail.com</p>
-				<p class="contactDetail">Core, Media and Student Relations</p>
+			<div class="pure-u-1-3 headContact">
+				<img class="contactDetail contactImage animateElement animateElementOpacity" src="images/core2.jpg" />
+				<p class="nameOfHead contactDetail animateElement animateElementOpacity">Hitesh Singla</p>
+				<p class="contactDetail animateElement animateElementOpacity">+91 9677043890</p>
+				<p class="contactDetail animateElement animateElementOpacity">hiteshsingla90@gmail.com</p>
+				<p class="contactDetail animateElement animateElementOpacity">Core, Media and Student Relations</p>
 			</div>
-			<div class="headContact">
-				<img class="contactDetail contactImage" src="images/core3.png" />
-				<p class="nameOfHead contactDetail">M Aghamarshana</p>
-				<p class="contactDetail">+91 8122495355</p>
-				<p class="contactDetail">aghu1995@gmail.com</p>
-				<p class="contactDetail">Core, Media and Student Relations</p>
+			<div class="pure-u-1-3 headContact">
+				<img class="contactDetail contactImage animateElement animateElementRight" src="images/core3.png" />
+				<p class="nameOfHead contactDetail animateElement animateElementRight">M Aghamarshana</p>
+				<p class="contactDetail animateElement animateElementRight">+91 8122495355</p>
+				<p class="contactDetail animateElement animateElementRight">aghu1995@gmail.com</p>
+				<p class="contactDetail animateElement animateElementRight">Core, Media and Student Relations</p>
 			</div>
-			<p id="followUs"> Follow us on: <br />
-				<a href="https://www.facebook.com/Shaastra" target="_blank"><img class="logo" src="images/facebook_logo.png" /></a>
+			<p class="pure-u-1-1 animateElement animateElementOpacity" id="followUs"> Follow us on: <br />
+				<a href="https://www.facebook.com/Shaastra" target="_blank"><img class="logo" src="images/facebook_logo.png" /></a> <!--change-->
 				<a href="https://twitter.com/shaastraiitm" target="_blank"><img class="logo" src="images/twitter_logo.png" /></a> 
 			</p>
+		</div>
+		<div class="content pure-g" id="termsAndConditions">
+			<p class="pure-u-1-1 header animateElement animateElementOpacity">Terms and Conditions</p>
+			<ul class="pure-u-1-1">
+				<li class="animateElement animateElementLeft">Developing and disseminating information about Steering Committee of Shaastra (SCS) through the college mailing lists and other sources like campus media body etc before 31/12/16.</li>
+				<li class="animateElement animateElementLeft">Publicizing events of SCS on social media(Facebook, twitter, WhatsApp etc.) viz by relevant ways and strategies mentioned by SCS. A campus ambassador should share around 150 Facebook posts before 31/12/16 to successfully complete his tenure.</li>
+				<li class="animateElement animateElementLeft">Putting up approximately 10 posters received from the SCS team on college notice boards and other earmarked locations of the campus during the said dates.</li>
+				<li class="animateElement animateElementLeft">Helping out the SCS and facilitating them in the process in case an event is conducted in his/her college.</li>
+				<li class="animateElement animateElementLeft">A student will be eligible to become a campus ambassador only if he/she is currently studying in a recognised institute.</li>
+				<li class="animateElement animateElementLeft">It is compulsory for all campus ambassadors to register and complete their profile at Youth4work.com, anyone failing to do so will not be considered for certification by Youth4work.</li>
+			</ul>
 		</div>
 	</body>
 </html>
